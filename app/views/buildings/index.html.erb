@@ -1,0 +1,166 @@
+<div class="container">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">EBC Meeting service</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="./index.html">Budovy
+            <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-item nav-link" href="./rooms.html">Místnosti</a>
+          <a class="nav-item nav-link" href="./today.html">Plán</a>
+
+        </div>
+
+
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Uživatelské jméno" aria-label="username">
+        <input class="form-control mr-sm-2" type="password" placeholder="heslo" aria-label="username">
+
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Přihlásit</button>
+      </form>
+    </nav>
+  </header>
+
+
+  <nav aria-label="breadcrumb" role="navigation">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Rezervační systém</a>
+      </li>
+      <!--  <li class="breadcrumb-item"><a href="#">Budovy</a></li>
+<li class="breadcrumb-item active" aria-current="page">Místnosti</li> -->
+    </ul>
+  </nav>
+
+
+  <div class="container-fluid">
+
+    <br />
+
+    <h1>
+      Přehled budov
+    </h1>
+    <hr class="bg-dark">
+
+    <br />
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID budovy</th>
+          <th scope="col">Název budovy</th>
+          <th scope="col">Počet místností</th>
+          <th scope="col">Město</th>
+          <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td scope="row">C6</th>
+          <th><a href="./rooms.html?build=C6">Classic 6</a></td>
+          <td>29</td>
+          <td>Brno</td>
+          <td class="dropdown">
+            <div class="btn-group">
+              <img src="img/icon-pencil.png" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   alt="nabídka" />
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Upravit</a>
+                <a class="dropdown-item bg-danger" href="#">Smazat</a>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+        <tr class="table-secondary">
+          <td scope="row">C7</th>
+          <th class=""><a class="" href="./rooms.html?build=C7">Classic 7</a></td>
+          <td>45</td>
+          <td>Praha</td>
+          <td class="dropdown">
+            <div class="btn-group">
+              <img src="img/icon-pencil.png" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   alt="nabídka" />
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Upravit</a>
+                <a class="dropdown-item bg-danger" href="#">Smazat</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">PAR</th>
+          <th><a href="./rooms.html?build=PAR">Parukářka</a></td>
+          <td>7</td>
+          <td>Praha</td>
+          <td class="dropdown">
+            <div class="btn-group">
+              <img src="img/icon-pencil.png" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   alt="nabídka" />
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Upravit</a>
+                <a class="dropdown-item bg-danger" href="#">Smazat</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-secondary">
+          <td scope="row">C65</th>
+          <th><a href="./rooms.html?build=C65">Point C</a></td>
+          <td>16</td>
+          <td>České Budějovice</td>
+          <td class="dropdown">
+            <div class="btn-group">
+              <img src="img/icon-pencil.png" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                   alt="nabídka" />
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Upravit</a>
+                <a class="dropdown-item bg-danger" href="#">Smazat</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+
+      <br />
+
+      <button class="btn btn-outline-info btn-sm">
+        Přidat budovu
+      </button>
+
+    </div>
+
+
+  </div>
+
+  <hr>
+
+  <footer class="text-muted bottom">by lopliok</footer>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
