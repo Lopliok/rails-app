@@ -37,6 +37,15 @@ class BuildingsController < ApplicationController
     end
   end
 
+
+  def destroy
+    @building = Building.find(params[:id])
+
+    @building.destroy
+
+    redirect_to buildings_path
+  end
+
   private
   def building_params
     params.require(:building).permit(:title, :code)

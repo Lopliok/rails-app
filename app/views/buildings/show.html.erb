@@ -1,13 +1,13 @@
 <div class="container-fluid">
-<p>
-  <strong>Title:</strong>
-  <%= @building.title %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @building.title %>
+  </p>
 
-<p>
-  <strong>Code:</strong>
-  <%= @building.code %>
-</p>
+  <p>
+    <strong>Code:</strong>
+    <%= @building.code %>
+  </p>
 
   <h2>Rooms</h2>
 
@@ -15,11 +15,18 @@
 
 
 
-  <h2>Add a room:</h2>
-  <%= render 'rooms/form' %>
+  <%= link_to 'New room', new_building_room_path(building_id: @building.id) %>
+
+<br />
+  <br />
 
 
-<%= link_to 'Edit', edit_building_path(@building) %> |
-<%= link_to 'Back', buildings_path %>
+
+  <%= link_to 'Edit', edit_building_path(@building) %> |
+  <%= link_to 'Delete',
+              building_path(@building),
+              method: :delete,
+              data: { confirm: 'Jsi si jistý?' } %>  |
+  <%= link_to 'Back', buildings_path %>
 
 </div>

@@ -2,13 +2,18 @@ Rails.application.routes.draw do
   get 'buildings/index'
 
 
- # get 'buildings/index'
+ #get 'buildings/index'
+
+
 
   resources :buildings do
-    resources :rooms
+    resources :rooms, only: [:new, :create, :edit, :update, :destroy]
+    resources :lessons, only: [:new, :create, :edit, :update, :destroy]
   end
 
-  root 'buildings#index'
+
+
+  #root 'buildings#index'
 
 
 

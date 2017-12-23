@@ -1,4 +1,4 @@
-class RoomsController < ApplicationController
+class LessonsController < ApplicationController
 
   before_action :set_building
 
@@ -37,5 +37,3 @@ class RoomsController < ApplicationController
     params.require(:room).permit(:title, :code, :building_id)
   end
 end
-
-
