@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
  # get 'buildings/index'
 
-
-  resources :buildings
+  resources :buildings do
+    resources :rooms
+  end
 
   root 'buildings#index'
 

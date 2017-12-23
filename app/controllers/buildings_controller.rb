@@ -29,8 +29,6 @@ class BuildingsController < ApplicationController
   def update
     @building = Building.find(params[:id])
 
-    puts "fsdfds"
-
     if @building.update(building_params)
       redirect_to @building
     else

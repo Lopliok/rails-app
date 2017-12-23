@@ -1,35 +1,6 @@
-<%= form_with scope: :building, url: buildings_path, local: true do |form| %>
+<h1>New buildings</h1>
 
-
-    <% if @building.errors.any? %>
-        <div id="error_explanation">
-          <h2>
-            <%= pluralize(@building.errors.count, "error") %> prohibited
-            this building from being saved:
-          </h2>
-          <ul>
-            <% @building.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
-
-    <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-    </p>
-
-    <p>
-      <%= form.label :code %><br>
-      <%= form.text_field :code %>
-    </p>
-
-
-    <p>
-      <%= form.submit %>
-    </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Back', buildings_path %>
+

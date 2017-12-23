@@ -1,0 +1,15 @@
+<p>
+  <strong>Title:</strong>
+  <%= room.title %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= room.code %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Room', [room.building, room],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
