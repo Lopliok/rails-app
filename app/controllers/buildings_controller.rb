@@ -26,6 +26,7 @@ class BuildingsController < ApplicationController
 
   end
 
+
   def update
     @building = Building.find(params[:id])
 

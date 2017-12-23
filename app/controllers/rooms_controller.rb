@@ -3,9 +3,11 @@ class RoomsController < ApplicationController
 
   def create
     @building = Building.find(params[:building_id])
+    puts "fdsfdsf"
     @room = @building.rooms.create(room_params)
-    redirect_to buildings_path(@building)
+    redirect_to building_room_path(@building)
   end
+
 
   def destroy
     @building = Building.find(params[:building_id])
