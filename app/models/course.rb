@@ -3,7 +3,7 @@ class Course < ApplicationRecord
   has_many :teachers, through: :teacher_assignments
 
   has_many :student_assignments
-  has_many :students,through: :student_assignments
+  has_many :students, through: :student_assignments
 
   has_many :lessons
   validates :title, presence: true
