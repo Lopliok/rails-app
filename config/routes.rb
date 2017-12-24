@@ -1,17 +1,20 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   devise_for :admins, path: 'admin', skip: :registrations
-=======
+
   devise_for :users
->>>>>>> 58ad4caac7e427339e88216d1dc3c9c3f1924b79
+
   get 'buildings/index'
 
 
  #get 'buildings/index'
 
   namespace :admin do
-    resources :buildings
-    resources :rooms
+    resources :buildings do
+      resources :rooms
+    end
+    resources :lessons
+    resources :courses
   end
 
   get 'admin' => 'admin/building#index'

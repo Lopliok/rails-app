@@ -11,8 +11,9 @@
 
 
 
-
-  <%= link_to 'New lesson', new_building_room_path(building_id: @building.id) %>
+  <%= link_to 'Lessons', building_room_lessons_path(room_id: @room.id) %>
+|
+  <%= link_to 'New lesson', new_building_room_lesson_path(room_id: @room.id) %>
 
   <br />
   <br />
@@ -24,6 +25,6 @@
               building_path(@building),
               method: :delete,
               data: { confirm: 'Jsi si jistý?' } %>  |
-  <%= link_to 'Back', buildings_path %>
+  <%= link_to 'Back', building_path(params[:building_id]) %>
 
 </div>

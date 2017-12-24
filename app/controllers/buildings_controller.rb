@@ -1,6 +1,5 @@
 class BuildingsController < ApplicationController
 
-  http_basic_authenticate_with name: "admind", password: "admin", only: [:new, :edit, :create, :destroy]
 
 
   def index

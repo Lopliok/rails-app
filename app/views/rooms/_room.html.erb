@@ -7,11 +7,16 @@
   <strong>Code:</strong>
   <%= room.code %>
 </p>
+<p>
+  <strong>Room id</strong>
+<%= room.id %>
+</p>
+
 
 
 
 <p>
-  <%= link_to "Show room #{room.title}", building_room_path(room) %>
+  <%= link_to "Show room #{room.title}", [room.building, room] %>
 </p>
 <p>
   <%= link_to 'Destroy Room', [room.building, room],

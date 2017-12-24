@@ -9,10 +9,7 @@ end
 gem 'simple_form'
 
 gem 'devise'
-<<<<<<< HEAD
-=======
 
->>>>>>> 58ad4caac7e427339e88216d1dc3c9c3f1924b79
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 

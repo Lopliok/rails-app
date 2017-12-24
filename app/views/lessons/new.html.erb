@@ -1,0 +1,8 @@
+
+<%= simple_form_for([@room, @lessons] ) do |f| %>
+    <%= f.input :start_at %>
+    <%= f.input :end_at %>
+    <%= f.input :duration %>
+
+    <%= f.button :submit %>
+<% end %>
