@@ -1,39 +1,22 @@
 class LessonsController < ApplicationController
 
-  before_action :set_building
+  before_action :set_lesson, only: [:show]
 
-  def create
-    @building = Building.find(params[:building_id])
-    @room = @building.rooms.create(room_params)
-    redirect_to building_path(@building)
-  end
 
-  def new
-    puts params
-    @room = Room.new(building_id: @building.id)
+  def index
+    @lessons = Lesson.all
   end
 
 
-  def destroy
-    @building = Building.find(params[:building_id])
-    @room = @building.rooms.find(params[:id])
-    @room.destroy
-    redirect_to building_path(@building)
+  def show
   end
-
-
 
   private
-
-
-  private
-  def set_building
-    @building = Building.find(params[:building_id])
+  def set_lesson
+    @lesson = Lesson.find(params[:id])
   end
 
-
-
-  def room_params
-    params.require(:room).permit(:title, :code, :building_id)
+  def lesson_params
+    params.require(:lesson).permit(:start_at, :end_at, :duration)
   end
 end

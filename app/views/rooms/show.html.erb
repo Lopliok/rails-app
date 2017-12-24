@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <p>
+    <strong>Title:</strong>
+    <%= @room.title %>
+  </p>
+
+  <p>
+    <strong>Code:</strong>
+    <%= @room.code %>
+  </p>
+
+
+
+
+  <%= link_to 'New lesson', new_building_room_path(building_id: @building.id) %>
+
+  <br />
+  <br />
+
+
+
+  <%= link_to 'Edit', edit_building_path(@building) %> |
+  <%= link_to 'Delete',
+              building_path(@building),
+              method: :delete,
+              data: { confirm: 'Jsi si jistý?' } %>  |
+  <%= link_to 'Back', buildings_path %>
+
+</div>

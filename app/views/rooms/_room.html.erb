@@ -8,6 +8,11 @@
   <%= room.code %>
 </p>
 
+
+
+<p>
+  <%= link_to "Show room #{room.title}", building_room_path(room) %>
+</p>
 <p>
   <%= link_to 'Destroy Room', [room.building, room],
               method: :delete,

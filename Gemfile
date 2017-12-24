@@ -8,6 +8,7 @@ end
 
 gem 'simple_form'
 
+gem 'devise'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 

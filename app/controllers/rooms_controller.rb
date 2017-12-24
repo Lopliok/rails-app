@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
 
   before_action :set_building
+  before_action :set_room, only: [:show ]
 
   def create
     @building = Building.find(params[:building_id])
@@ -9,8 +10,11 @@ class RoomsController < ApplicationController
   end
 
   def new
-    puts params
     @room = Room.new(building_id: @building.id)
+  end
+
+  def show
+
   end
 
 
@@ -24,11 +28,12 @@ class RoomsController < ApplicationController
 
 
   private
-
-
-  private
   def set_building
     @building = Building.find(params[:building_id])
+  end
+
+  def set_room
+    @room = Room.find(params[:id])
   end
 
 
