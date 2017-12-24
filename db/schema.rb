@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171224024237) do
 
   create_table "admins", force: :cascade do |t|
@@ -28,6 +29,9 @@ ActiveRecord::Schema.define(version: 20171224024237) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
+=======
+ActiveRecord::Schema.define(version: 20171224015152) do
+>>>>>>> 58ad4caac7e427339e88216d1dc3c9c3f1924b79
 
   create_table "articles", force: :cascade do |t|
     t.string "title"

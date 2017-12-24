@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   devise_for :admins, path: 'admin', skip: :registrations
+=======
+  devise_for :users
+>>>>>>> 58ad4caac7e427339e88216d1dc3c9c3f1924b79
   get 'buildings/index'
 
 
